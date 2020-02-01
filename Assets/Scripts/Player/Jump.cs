@@ -11,7 +11,7 @@ public class Jump : MonoBehaviour
     //[Range(0, 10)]
     //public float jumpingup = 2f;
 
-    [Range(0, 10)]
+    [Range(0, 15)]
     public float  jumpVelocity;
 
     bool jumping;
