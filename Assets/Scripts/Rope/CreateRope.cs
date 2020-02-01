@@ -13,6 +13,8 @@ public class CreateRope : MonoBehaviour
     public float breakDistance;
     public float maxDistance;
 
+    public bool isBreak;
+
     private float sizeSprite;
     private float numberOfSprite;
 
@@ -22,9 +24,11 @@ public class CreateRope : MonoBehaviour
     private float oldDistance;
     private float newDistance;
     private int side;
+
     private void Start()
     {
         side = 1;
+        isBreak = false;
         
         Vector2 sizeBox = sprite.GetComponent<BoxCollider2D>().bounds.size;
         sizeSprite = sizeBox.x;
@@ -95,8 +99,10 @@ public class CreateRope : MonoBehaviour
 
     private void Update()
     {
-        UpdateRope();
-        CheckBreakRope(oldDistance);
+        if(!isBreak){
+            UpdateRope();
+            CheckBreakRope(oldDistance);
+        }
     }
 
     private void UpdateRope(){
@@ -158,6 +164,13 @@ public class CreateRope : MonoBehaviour
     private void CheckBreakRope(float distance){
         if(distance > breakDistance){
             GameObject.Destroy(nodes[nodes.Count / 2]);
+        }
+    }
+
+    public void ChangeRopeColor(Color col){
+        foreach (GameObject g in nodes)
+        {
+            g.GetComponent<SpriteRenderer>().material.color = col;
         }
     }
 }

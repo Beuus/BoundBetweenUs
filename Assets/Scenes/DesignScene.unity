@@ -141,7 +141,7 @@ PrefabInstance:
     - target: {fileID: 591598160089333230, guid: 5a91bb089cf1e074f900d2dd7f2fc308,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.15
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 591598160089333230, guid: 5a91bb089cf1e074f900d2dd7f2fc308,
         type: 3}
@@ -156,7 +156,7 @@ PrefabInstance:
     - target: {fileID: 8516134087709860807, guid: 5a91bb089cf1e074f900d2dd7f2fc308,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.46
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8516134087709860807, guid: 5a91bb089cf1e074f900d2dd7f2fc308,
         type: 3}
@@ -582,7 +582,7 @@ PrefabInstance:
     - target: {fileID: 591598160484442199, guid: ca2963d258d3d414bb8abfef2a4b6902,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.01
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3867640259998206288, guid: ca2963d258d3d414bb8abfef2a4b6902,
         type: 3}
@@ -597,7 +597,7 @@ PrefabInstance:
     - target: {fileID: 3867640259998206293, guid: ca2963d258d3d414bb8abfef2a4b6902,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.49
+      value: -1.5
       objectReference: {fileID: 0}
     - target: {fileID: 3867640259998206293, guid: ca2963d258d3d414bb8abfef2a4b6902,
         type: 3}
@@ -739,7 +739,7 @@ MonoBehaviour:
     type: 3}
   doubleHingeNode: {fileID: 0}
   breakDistance: 10
-  minimunDistance: 0
+  maxDistance: 0
 --- !u!1 &591598158783646819
 GameObject:
   m_ObjectHideFlags: 0
