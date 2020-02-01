@@ -10,7 +10,13 @@ public class Controls : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        _gameManager = GameManager.Instance;
+        _gameManager = FindObjectOfType<GameManager>();
+
+        if (_gameManager == null)
+        {
+            Debug.LogError("ERROR. Error al cargar el game manager");
+        }
+
         _gameManager.OnStateChange += HandleOnStateChange;
     }
     public void HandleOnStateChange()
