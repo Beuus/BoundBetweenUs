@@ -271,5 +271,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RopeManager
       objectReference: {fileID: 0}
+    - target: {fileID: 7582946987326225939, guid: 33947840e80c27145abed0c0ece2acf6,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33947840e80c27145abed0c0ece2acf6, type: 3}

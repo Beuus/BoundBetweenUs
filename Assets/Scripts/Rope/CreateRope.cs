@@ -10,19 +10,26 @@ public class CreateRope : MonoBehaviour
     public GameObject hingeNode;
     public GameObject doubleHingeNode;
 
-    public float distace;
     public float breakDistance;
-    public float minimunDistance;
+    public float maxDistance;
 
     private float sizeSprite;
     private float numberOfSprite;
 
     private List<GameObject> nodes;
     private List<HingeJoint2D> springs;
+
+    private float oldDistance;
+    private float newDistance;
+    private int side;
     private void Start()
     {
+        side = 1;
+        
         Vector2 sizeBox = sprite.GetComponent<BoxCollider2D>().bounds.size;
         sizeSprite = sizeBox.x;
+
+        oldDistance = Mathf.Abs(fixedNodeOne.transform.position.x - fixedNodeTwo.transform.position.x);
 
         numberOfSprite = Mathf.Abs(fixedNodeOne.transform.position.x - fixedNodeTwo.transform.position.x)/sizeSprite;
         numberOfSprite = Mathf.Ceil(numberOfSprite);
@@ -83,6 +90,74 @@ public class CreateRope : MonoBehaviour
         hinges[1].anchor = new Vector3(sizeSprite, 0, 0);
 
         springs.Add(hinges[0]);
-        springs.Add(hinges[1]);
+        springs.Add(hinges[1]);  
+    }
+
+    private void Update()
+    {
+        UpdateRope();
+        CheckBreakRope(oldDistance);
+    }
+
+    private void UpdateRope(){
+        newDistance = Mathf.Abs(fixedNodeOne.transform.position.x - fixedNodeTwo.transform.position.x);
+        float expandDistance = (newDistance - oldDistance);
+        
+        if(expandDistance > sizeSprite){
+            AddNode(side);
+            side = -side;
+            oldDistance = newDistance;
+        }
+        else if(expandDistance < -sizeSprite){
+            DeleteNode(side);
+            side = -side;
+            oldDistance = newDistance;
+        }
+    }
+
+    private void AddNode(int side){
+        if(side < 0){
+            nodes.Insert(0,Instantiate(hingeNode, fixedNodeOne.transform.position + new Vector3(sizeSprite / 2, 0, 0), Quaternion.identity, this.transform));
+            springs.Insert(0,nodes[0].GetComponent<HingeJoint2D>());
+            springs[0].connectedBody = fixedNodeOne.GetComponent<Rigidbody2D>();
+            springs[0].anchor = -new Vector3(sizeSprite / 2, 0, 0);
+
+            springs[2].connectedBody = nodes[0].GetComponent<Rigidbody2D>();
+            springs[2].anchor = -new Vector3(sizeSprite, 0, 0);
+        }
+        else{
+            nodes.Insert(0,Instantiate(hingeNode, fixedNodeTwo.transform.position - new Vector3(sizeSprite / 2, 0, 0), Quaternion.identity, this.transform));
+            springs.Insert(0,nodes[0].GetComponent<HingeJoint2D>());
+
+            springs[0].connectedBody = fixedNodeTwo.GetComponent<Rigidbody2D>();
+            springs[0].anchor = new Vector3(sizeSprite / 2, 0, 0);
+
+            springs[2].connectedBody = nodes[0].GetComponent<Rigidbody2D>();
+            springs[2].anchor = new Vector3(sizeSprite, 0, 0);
+        }
+    }
+
+    private void DeleteNode(int side){
+        GameObject nodeToRemove = nodes[0];
+
+        nodes.RemoveAt(0);
+        springs.RemoveAt(0);
+
+        Destroy(nodeToRemove);
+        if(side > 0){
+            springs[1].connectedBody = fixedNodeOne.GetComponent<Rigidbody2D>();
+            springs[1].anchor = -new Vector3(sizeSprite / 2, 0, 0);
+        }
+        else{
+            springs[1].connectedBody = fixedNodeTwo.GetComponent<Rigidbody2D>();
+            springs[1].anchor = new Vector3(sizeSprite / 2, 0, 0);
+        }
+
+    }
+
+    private void CheckBreakRope(float distance){
+        if(distance > breakDistance){
+            GameObject.Destroy(nodes[nodes.Count / 2]);
+        }
     }
 }

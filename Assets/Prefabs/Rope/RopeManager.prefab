@@ -220,10 +220,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 7582946986480340891}
     m_Modifications:
+    - target: {fileID: 1526101612, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.00033923984
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526101612, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
+      propertyPath: m_Size.y
+      value: 0.14446715
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526101612, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.0006717928
+      objectReference: {fileID: 0}
+    - target: {fileID: 1526101612, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
+      propertyPath: m_Size.x
+      value: 0.14792079
+      objectReference: {fileID: 0}
     - target: {fileID: 598705158672012955, guid: a11ab4073e033b74e9a23261f82d1825,
         type: 3}
       propertyPath: m_Name
       value: New Sprite
+      objectReference: {fileID: 0}
+    - target: {fileID: 598705158672012956, guid: a11ab4073e033b74e9a23261f82d1825,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 598705158672012959, guid: a11ab4073e033b74e9a23261f82d1825,
         type: 3}
@@ -279,27 +300,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: -89.45801
-      objectReference: {fileID: 0}
-    - target: {fileID: 598705158672012956, guid: a11ab4073e033b74e9a23261f82d1825,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1526101612, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
-      propertyPath: m_Offset.y
-      value: -0.00033923984
-      objectReference: {fileID: 0}
-    - target: {fileID: 1526101612, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
-      propertyPath: m_Size.y
-      value: 0.14446715
-      objectReference: {fileID: 0}
-    - target: {fileID: 1526101612, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
-      propertyPath: m_Offset.x
-      value: 0.0006717928
-      objectReference: {fileID: 0}
-    - target: {fileID: 1526101612, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
-      propertyPath: m_Size.x
-      value: 0.14792079
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a11ab4073e033b74e9a23261f82d1825, type: 3}
