@@ -11,11 +11,11 @@ public class Jump : MonoBehaviour
     //[Range(0, 10)]
     //public float jumpingup = 2f;
 
-    [Range(0, 5)]
+    [Range(0, 10)]
     public float  jumpVelocity;
 
     bool jumping;
-    public string jumpKey;
+    public string input;
 
     private Rigidbody2D rb;
 
@@ -34,7 +34,7 @@ public class Jump : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(jumpKey) && !jumping)
+        if (Input.GetButtonDown(input) && !jumping)
         {
             jumping = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
@@ -43,7 +43,7 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Floor"))
+        if (collision.gameObject.tag.Equals("Floor") || collision.gameObject.tag.Equals("Platform"))
         {
             jumping = false;
         }

@@ -315,8 +315,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  leftKey: a
-  rightKey: d
+  input: Horizontal2
 --- !u!23 &1061901462
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -495,8 +494,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  leftKey: left
-  rightKey: right
+  input: Horizontal1
 --- !u!61 &1457071661
 BoxCollider2D:
   m_ObjectHideFlags: 0

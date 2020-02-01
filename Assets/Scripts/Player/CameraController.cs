@@ -6,18 +6,23 @@ public class CameraController : MonoBehaviour
 {
     public GameObject player1;
     public GameObject player2;
+    public float cameraFactor;
 
     private Vector3 offset;
+    private float fov;
 
     // Start is called before the first frame update
     void Start()
     {
-        offset = ((transform.position - player1.transform.position) + (transform.position - player2.transform.position))/2;
+        fov = Camera.main.orthographicSize;
+        offset = ((transform.position - player1.transform.position) + (transform.position - player2.transform.position)) / 2;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = player1.transform.position + (player2.transform.position - player1.transform.position)/2 + offset;
+        float distance = Vector2.Distance(player1.transform.position, player2.transform.position);
+        Camera.main.orthographicSize = fov + distance * cameraFactor;
+        transform.position = player1.transform.position + (player2.transform.position - player1.transform.position) / 2 + offset;
     }
 }
