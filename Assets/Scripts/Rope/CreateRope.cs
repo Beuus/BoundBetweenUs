@@ -11,8 +11,9 @@ public class CreateRope : MonoBehaviour
     public GameObject hingeNode;
     public GameObject doubleHingeNode;
 
-    public float breakDistance;
-    public float compressFactor;
+    public float breakDistance=10;
+    public int ropeLives=2;
+    public float compressFactor=1;
 
     public bool isBreak = false;
     public bool isUnbreakable = false;
@@ -177,15 +178,26 @@ public class CreateRope : MonoBehaviour
 
     private void CheckBreakRope(float distance){
         if(distance > breakDistance){
-            GameObject.Destroy(nodes[nodes.Count / 2]);
-            isBreak = true;
+            BreakRope();
         }
+    }
+
+    private void BreakRope(){
+        GameObject.Destroy(nodes[nodes.Count / 2]);
+        isBreak = true;
     }
 
     public void ChangeRopeColor(Color col){
         foreach (GameObject g in nodes)
         {
             g.GetComponent<SpriteRenderer>().material.color = col;
+        }
+    }
+
+    public void RopeDamage(){
+        ropeLives--;
+        if(ropeLives <= 0){
+            BreakRope();
         }
     }
 }
