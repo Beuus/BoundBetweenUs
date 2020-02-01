@@ -16,7 +16,6 @@ public class FallingPlatform : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log("Colliding with " + collision);
         if (collision.gameObject.tag == "Player")
         {
             StartCoroutine(FallAfterDelay());
@@ -25,9 +24,7 @@ public class FallingPlatform : MonoBehaviour
 
     IEnumerator FallAfterDelay()
     {
-        Debug.Log("Waiting...");
         yield return new WaitForSeconds(time);
-        Debug.Log("Falling");
         platform.isKinematic = false;
     }
 }
