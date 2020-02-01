@@ -7,6 +7,7 @@ public class CameraController : MonoBehaviour
     public GameObject player1;
     public GameObject player2;
     public float cameraFactor;
+    public float fovOffset;
 
     private Vector3 offset;
     private float fov;
@@ -14,7 +15,8 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        fov = Camera.main.orthographicSize;
+        fov = Camera.main.orthographicSize+fovOffset;
+        Debug.Log(fov);
         offset = ((transform.position - player1.transform.position) + (transform.position - player2.transform.position)) / 2;
     }
 
