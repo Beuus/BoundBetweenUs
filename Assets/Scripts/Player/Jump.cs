@@ -11,7 +11,7 @@ public class Jump : MonoBehaviour
     //[Range(0, 10)]
     //public float jumpingup = 2f;
 
-    [Range(0, 5)]
+    [Range(0, 10)]
     public float  jumpVelocity;
 
     bool jumping;
@@ -43,7 +43,7 @@ public class Jump : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Floor"))
+        if (collision.gameObject.tag.Equals("Floor") || collision.gameObject.tag.Equals("Platform"))
         {
             jumping = false;
         }
