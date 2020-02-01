@@ -283,6 +283,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 1457071655}
   player2: {fileID: 1061901457}
+  cameraFactor: 0.5
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
