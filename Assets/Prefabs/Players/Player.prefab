@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &591598160484442199
 Transform:
   m_ObjectHideFlags: 0
@@ -176,7 +176,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  input: Horizontal1
+  controllerInput: Horizontal1
+  keysInput: Horizontal1B
+  controller: 0
 --- !u!114 &3867640259998206288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpVelocity: 8
-  jumpKey: up
+  input: up
 --- !u!50 &3867640259998206294
 Rigidbody2D:
   serializedVersion: 4
