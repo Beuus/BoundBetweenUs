@@ -9,8 +9,11 @@ public class Menu : MonoBehaviour
 
     // Start is called before the first frame update
     void Awake()
-    {
-        _gameManager = GameManager.Instance;
+    {   
+        if(_gameManager == null)
+        {
+            _gameManager = FindObjectOfType<GameManager>();
+        }
         _gameManager.OnStateChange += HandleOnStateChange;
     }
     public void HandleOnStateChange()
@@ -20,10 +23,15 @@ public class Menu : MonoBehaviour
 
     public void StartGame()
     {
+        //Cambiamos el sprite
+        Debug.Log("Player 1: " + _gameManager.player1.ToString());
+        //Cambiamos el sprite
+        Debug.Log("Player 2: " + _gameManager.player2.ToString());
+
         //start game scene
-        _gameManager.SetGameState(GameState.GAME);
+        _gameManager.SetGameState(GameState.CHAMPIONS);
         Debug.Log(_gameManager.gameState);
-        SceneManager.LoadScene("DesignScene");
+        SceneManager.LoadScene("PlayerSelectorScene");
     }
 
 

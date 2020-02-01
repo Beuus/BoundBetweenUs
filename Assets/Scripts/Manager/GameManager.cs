@@ -4,14 +4,21 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 // Game States
-public enum GameState { MAIN_MENU, CONTROLS, GAME, PAUSED }
+public enum GameState { MAIN_MENU, CONTROLS, CHAMPIONS, GAME, PAUSED }
 
 public delegate void OnStateChangeHandler();
 
 public class GameManager : MonoBehaviour
 {
 	public GameManager() { }
-	private static GameManager instance = null;
+
+	public enum PlayerGenre { GIRL, BOY }
+
+	public PlayerGenre player1;
+	public PlayerGenre player2;
+
+	public static GameManager _gameManager = null;
+
 	public event OnStateChangeHandler OnStateChange;
 	public GameState gameState { get; private set; }
 
@@ -19,14 +26,13 @@ public class GameManager : MonoBehaviour
 	{
 		get
 		{
-			if (GameManager.instance == null)
+			if (_gameManager == null)
 			{
-				GameManager.instance = new GameManager();
-				//DontDestroyOnLoad(GameManager.instance);
+				_gameManager = new GameManager();
+				DontDestroyOnLoad(_gameManager);
 			}
-			return GameManager.instance;
+			return _gameManager;
 		}
-
 	}
 
 	public void SetGameState(GameState state)
@@ -37,7 +43,11 @@ public class GameManager : MonoBehaviour
 
 	public void OnApplicationQuit()
 	{
-		GameManager.instance = null;
+		Application.Quit();
 	}
 
+	public void GameOver()
+	{
+		Debug.Log("GameOver");
+	}
 }
