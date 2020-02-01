@@ -569,6 +569,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8516134087709860810, guid: 5a91bb089cf1e074f900d2dd7f2fc308,
+        type: 3}
+      propertyPath: speed
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 8516134087709860814, guid: 5a91bb089cf1e074f900d2dd7f2fc308,
         type: 3}
       propertyPath: m_Name
@@ -773,7 +778,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 371566b0577be20498caaff3804d7517, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1983376829}
+  targets: []
+  _indexStart: 0
   speed: 0
 --- !u!114 &783392641
 MonoBehaviour:
@@ -1096,6 +1102,11 @@ PrefabInstance:
         type: 3}
       propertyPath: jumpVelocity
       value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3867640259998206290, guid: ca2963d258d3d414bb8abfef2a4b6902,
+        type: 3}
+      propertyPath: speed
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3867640259998206293, guid: ca2963d258d3d414bb8abfef2a4b6902,
         type: 3}
@@ -1478,6 +1489,7 @@ MonoBehaviour:
   doubleHingeNode: {fileID: 0}
   breakDistance: 20
   maxDistance: 0
+  isBreak: 0
 --- !u!1 &591598158783646819
 GameObject:
   m_ObjectHideFlags: 0
