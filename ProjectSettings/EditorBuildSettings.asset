@@ -20,4 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu/PlayerSelectorScene.unity
     guid: 0f28f6cd2d969824a9045f77723631cc
+  - enabled: 1
+    path: Assets/Scenes/Menu/RetryScene.unity
+    guid: ee4737f628074d940ae13dac604a9d4b
   m_configObjects: {}

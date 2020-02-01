@@ -10,34 +10,33 @@ public delegate void OnStateChangeHandler();
 
 public class GameManager : MonoBehaviour
 {
-	public GameManager() { }
-
 	public enum PlayerGenre { GIRL, BOY }
 
 	public PlayerGenre player1;
 	public PlayerGenre player2;
-
-	public static GameManager _gameManager = null;
-
+	
 	public event OnStateChangeHandler OnStateChange;
 	public GameState gameState { get; private set; }
 
-	public static GameManager Instance
+	private void Start()
 	{
-		get
-		{
-			if (_gameManager == null)
-			{
-				_gameManager = new GameManager();
-				DontDestroyOnLoad(_gameManager);
-			}
-			return _gameManager;
-		}
+		DontDestroyOnLoad(this);
 	}
 
 	public void SetGameState(GameState state)
 	{
 		this.gameState = state;
+		OnStateChange();
+	}
+	public void SetPlayer1(PlayerGenre state)
+	{
+		this.player1 = state;
+		OnStateChange();
+	}
+
+	public void SetPlayer2(PlayerGenre state)
+	{
+		this.player2 = state;
 		OnStateChange();
 	}
 
@@ -49,5 +48,6 @@ public class GameManager : MonoBehaviour
 	public void GameOver()
 	{
 		Debug.Log("GameOver");
+		SceneManager.LoadScene("RetryScene");
 	}
 }

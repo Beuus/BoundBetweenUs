@@ -16,16 +16,13 @@ public class PlayerSelector : MonoBehaviour
             Debug.LogError("ERROR. Error al cargar el game manager");
         }
 
-        _gameManager.player1 = GameManager.PlayerGenre.GIRL;
-        _gameManager.player2 = GameManager.PlayerGenre.BOY;
-
         _gameManager.OnStateChange += HandleOnStateChange;
     }
 
 
     public void HandleOnStateChange()
     {
-        Debug.Log("Change!!");
+        //Debug.Log("Change!!");
     }
 
     public void ChangePlayer1()
@@ -79,14 +76,4 @@ public class PlayerSelector : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void ChangeGenre(GameManager.PlayerGenre Changeplayer)
-    {
-        if (Changeplayer == GameManager.PlayerGenre.GIRL)
-        {
-            Changeplayer = GameManager.PlayerGenre.BOY;
-            return;
-        }
-
-        Changeplayer = GameManager.PlayerGenre.GIRL;
-    }
 }

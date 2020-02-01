@@ -187,7 +187,6 @@ public class CreateRope : MonoBehaviour
 
         FindObjectOfType<GameManager>().GameOver();
 
-        var gm = UnityEngine.Object.FindObjectOfType<GameManager>();
 
     }
 
