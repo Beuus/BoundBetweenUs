@@ -9,6 +9,7 @@ public class GenerateFallingElements : MonoBehaviour
 
     private float initialPosition;
     private float finalPosition;
+    private int counter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +35,8 @@ public class GenerateFallingElements : MonoBehaviour
         while (true) {
             GameObject g = Instantiate(elementToGenerate, new Vector3(Random.Range(initialPosition, finalPosition), transform.position.y, transform.position.z), Quaternion.identity);
             g.transform.parent = this.transform;
+            g.transform.name = g.transform.name + counter;
+            ++counter;
             yield return new WaitForSeconds(timeGeneration);
         }
        
