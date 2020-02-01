@@ -5,6 +5,7 @@ using UnityEngine;
 public class Switch : MonoBehaviour
 {
     public bool activated;
+    public float time = 10;
 
     // Start is called before the first frame update
     void start()
@@ -18,7 +19,15 @@ public class Switch : MonoBehaviour
         {
             Debug.Log("Colliding");
             activated = true;
-            //Destroy(this.gameObject);
+            StartCoroutine(BackToOriginalPosition());
         }
+    }
+
+
+    IEnumerator BackToOriginalPosition()
+    {
+        yield return new WaitForSeconds(time);
+        activated = false;
+
     }
 }
