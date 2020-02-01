@@ -91,9 +91,9 @@ GameObject:
   - component: {fileID: 8516134087709860808}
   - component: {fileID: 8516134087709860809}
   - component: {fileID: 8516134087709860810}
-  - component: {fileID: 8516134087709860811}
   - component: {fileID: 8516134087709860812}
   - component: {fileID: 8516134087709860813}
+  - component: {fileID: 9168125208612209373}
   m_Layer: 0
   m_Name: Player2
   m_TagString: Untagged
@@ -179,20 +179,6 @@ MonoBehaviour:
   controllerInput: Horizontal2
   keysInput: Horizontal2B
   controller: 0
---- !u!114 &8516134087709860811
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8516134087709860814}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ebf229d60884e484c8a76969ddfaa535, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jumpVelocity: 5
-  input: w
 --- !u!50 &8516134087709860812
 Rigidbody2D:
   serializedVersion: 4
@@ -240,3 +226,16 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &9168125208612209373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8516134087709860814}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa6d1c5fdd72bdc488b0e12f5291a256, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  input: RopeUnbreakable2
