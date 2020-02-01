@@ -4,20 +4,30 @@ using UnityEngine;
 
 public class FallingPlatform : MonoBehaviour
 {
+    public float time;
+
     private Rigidbody2D platform;
 
     // Start is called before the first frame update
     void Start()
     {
         platform = GetComponent<Rigidbody2D>();
-        platform.gravityScale = 0.0f;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        Debug.Log("Colliding with " + collision);
+        if (collision.gameObject.tag == "Player")
         {
-            platform.gravityScale = 1.0f;
+            StartCoroutine(FallAfterDelay());
         }
+    }
+
+    IEnumerator FallAfterDelay()
+    {
+        Debug.Log("Waiting...");
+        yield return new WaitForSeconds(time);
+        Debug.Log("Falling");
+        platform.isKinematic = false;
     }
 }
