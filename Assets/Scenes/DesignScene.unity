@@ -1553,6 +1553,11 @@ PrefabInstance:
       propertyPath: jumpVelocity
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 3867640259998206288, guid: ca2963d258d3d414bb8abfef2a4b6902,
+        type: 3}
+      propertyPath: input
+      value: Jump1
+      objectReference: {fileID: 0}
     - target: {fileID: 3867640259998206290, guid: ca2963d258d3d414bb8abfef2a4b6902,
         type: 3}
       propertyPath: speed
@@ -1616,7 +1621,7 @@ PrefabInstance:
     - target: {fileID: 3867640259998206297, guid: ca2963d258d3d414bb8abfef2a4b6902,
         type: 3}
       propertyPath: m_Name
-      value: Player
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 3867640259998206297, guid: ca2963d258d3d414bb8abfef2a4b6902,
         type: 3}
@@ -2169,8 +2174,10 @@ MonoBehaviour:
     type: 3}
   doubleHingeNode: {fileID: 0}
   breakDistance: 12
-  maxDistance: 0
+  ropeLives: 2
+  compressFactor: 1
   isBreak: 0
+  isUnbreakable: 0
 --- !u!1 &591598158783646819
 GameObject:
   m_ObjectHideFlags: 0

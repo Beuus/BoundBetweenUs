@@ -106,17 +106,6 @@ public class CreateRope : MonoBehaviour
             if(!isUnbreakable){
                 CheckBreakRope(oldDistance);
             }
-            CheckUnbreak();
-        }
-    }
-
-    private void CheckUnbreak()
-    {
-        if(Input.GetButtonDown("RopeUnbreakable")){
-            isUnbreakable = true;
-        }
-        else if(Input.GetButtonUp("RopeUnbreakable")){
-            isUnbreakable = false;
         }
     }
 
