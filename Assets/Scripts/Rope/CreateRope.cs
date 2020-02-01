@@ -184,11 +184,10 @@ public class CreateRope : MonoBehaviour
     private void BreakRope(){
         GameObject.Destroy(nodes[nodes.Count / 2]);
         isBreak = true;
-<<<<<<< Updated upstream
+
         FindObjectOfType<GameManager>().GameOver();
-=======
         var gm = UnityEngine.Object.FindObjectOfType<GameManager>();
->>>>>>> Stashed changes
+
     }
 
     public void ChangeRopeColor(float distance){
