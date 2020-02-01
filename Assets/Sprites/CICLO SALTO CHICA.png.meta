@@ -1,7 +1,82 @@
 fileFormatVersion: 2
 guid: 4e7ea1536ebeded47bfa36d59684e8cd
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -8741978520953935481
+    second: CICLO SALTO CHICA_0
+  - first:
+      213: -1477705749217355342
+    second: CICLO SALTO CHICA_1
+  - first:
+      213: -4585774472203240105
+    second: CICLO SALTO CHICA_2
+  - first:
+      213: -2213044162802749860
+    second: CICLO SALTO CHICA_3
+  - first:
+      213: 5059143050930791692
+    second: CICLO SALTO CHICA_4
+  - first:
+      213: 6840634834488435651
+    second: CICLO SALTO CHICA_5
+  - first:
+      213: 8595754808910510700
+    second: CICLO SALTO CHICA_6
+  - first:
+      213: -3273750674387936803
+    second: CICLO SALTO CHICA_7
+  - first:
+      213: 6219496317518115730
+    second: CICLO SALTO CHICA_8
+  - first:
+      213: 5100351824028306352
+    second: CICLO SALTO CHICA_9
+  - first:
+      213: 6270196510627496359
+    second: CICLO SALTO CHICA_10
+  - first:
+      213: 8828854027800524015
+    second: CICLO SALTO CHICA_11
+  - first:
+      213: -6695581449631090262
+    second: CICLO SALTO CHICA_12
+  - first:
+      213: 922915771820551620
+    second: CICLO SALTO CHICA_13
+  - first:
+      213: -8209576430648818790
+    second: CICLO SALTO CHICA_14
+  - first:
+      213: -115300927645447798
+    second: CICLO SALTO CHICA_15
+  - first:
+      213: -8027393680004916728
+    second: CICLO SALTO CHICA_16
+  - first:
+      213: -3161480012050350923
+    second: CICLO SALTO CHICA_17
+  - first:
+      213: 8779301364182063182
+    second: CICLO SALTO CHICA_18
+  - first:
+      213: 8256590597890957573
+    second: CICLO SALTO CHICA_19
+  - first:
+      213: 1053183087274423266
+    second: CICLO SALTO CHICA_20
+  - first:
+      213: -3419669639922098327
+    second: CICLO SALTO CHICA_21
+  - first:
+      213: -1436257338610262646
+    second: CICLO SALTO CHICA_22
+  - first:
+      213: -2090397659737076070
+    second: CICLO SALTO CHICA_23
+  - first:
+      213: -8281904536249711854
+    second: CICLO SALTO CHICA_24
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +115,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +145,546 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_0
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 1562
+        width: 70
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78922782ad04ea680800000000000000
+      internalID: -8741978520953935481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_1
+      rect:
+        serializedVersion: 2
+        x: 347
+        y: 1565
+        width: 70
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b9d85743722e7be0800000000000000
+      internalID: -1477705749217355342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_2
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1567
+        width: 70
+        height: 196
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75d754cf96e0c50c0800000000000000
+      internalID: -4585774472203240105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_3
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 1571
+        width: 70
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ee3e32f00b941e0800000000000000
+      internalID: -2213044162802749860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_4
+      rect:
+        serializedVersion: 2
+        x: 1108
+        y: 1582
+        width: 84
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c05ad92eccfa53640800000000000000
+      internalID: 5059143050930791692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_5
+      rect:
+        serializedVersion: 2
+        x: 1363
+        y: 1582
+        width: 80
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c3a8d38321deee50800000000000000
+      internalID: 6840634834488435651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_6
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 1582
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6a7779d4714a4770800000000000000
+      internalID: 8595754808910510700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_7
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1579
+        width: 78
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd959e15b1d4192d0800000000000000
+      internalID: -3273750674387936803
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_8
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1320
+        width: 88
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 293748fc2f6105650800000000000000
+      internalID: 6219496317518115730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1349
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb09bc06f618c640800000000000000
+      internalID: 5100351824028306352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1318
+        width: 90
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a188d76186340750800000000000000
+      internalID: 6270196510627496359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_11
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1349
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe4b3d406f3668a70800000000000000
+      internalID: 8828854027800524015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1316
+        width: 98
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa93b0275248413a0800000000000000
+      internalID: -6695581449631090262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_13
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1347
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cd28f0310bdecc00800000000000000
+      internalID: 922915771820551620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1353
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9302c68bb9b11e80800000000000000
+      internalID: -8209576430648818790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_15
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1351
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a898b6dca6e566ef0800000000000000
+      internalID: -115300927645447798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_16
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1326
+        width: 95
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80a571f9af7f89090800000000000000
+      internalID: -8027393680004916728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_17
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1319
+        width: 84
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bcbd35edaa2024d0800000000000000
+      internalID: -3161480012050350923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_18
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1316
+        width: 76
+        height: 183
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e489c24731856d970800000000000000
+      internalID: 8779301364182063182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_19
+      rect:
+        serializedVersion: 2
+        x: 1628
+        y: 1308
+        width: 70
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 501ee1b476d459270800000000000000
+      internalID: 8256590597890957573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_20
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1347
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e3f0781078ad9e00800000000000000
+      internalID: 1053183087274423266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_21
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1342
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96f5147a494ea80d0800000000000000
+      internalID: -3419669639922098327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_22
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1321
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8d56166f83611ce0800000000000000
+      internalID: -1436257338610262646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_23
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1320
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9e4014676a6df2e0800000000000000
+      internalID: -2090397659737076070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO CHICA_24
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 170
+        width: 1705
+        height: 1079
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 213c32524b3c01d80800000000000000
+      internalID: -8281904536249711854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
