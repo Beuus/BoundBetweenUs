@@ -4,38 +4,35 @@ using UnityEngine;
 
 public class MobilePlatform : MonoBehaviour
 {
-    private Vector3 start;
-    public Transform target;
+    //public Transform target;
+    public List<Transform> targets = new List<Transform>();
+    public int _indexStart;
+
     public float speed;
-
-    private int dir;
-
 
     // Start is called before the first frame update
     void Start()
     {
-        start = transform.position;
-        dir = 1;
+        _indexStart = 0;
+        this.transform.position = targets[_indexStart].position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position == target.position)
+        if (this.transform.position == targets[_indexStart].position)
         {
-            dir = -1;
+            if ( (_indexStart + 1) < targets.Count)
+            {
+                //Next position
+                ++_indexStart;
+            }
+            else
+            {
+                _indexStart = 0;
+            }
         }
-        else if (transform.position == start)
-        {
-            dir = 1;
-        }
-        if (dir == -1)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, start, speed * Time.deltaTime);
-        }
-        else if (dir == 1)
-        {
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        }
+
+        transform.position = Vector3.MoveTowards(transform.position, targets[_indexStart].position, speed * Time.deltaTime);
     }
 }

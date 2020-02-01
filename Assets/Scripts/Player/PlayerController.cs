@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         else
             horizontalAxis = Input.GetAxis(keysInput);
         Vector3 movement = new Vector3(horizontalAxis, 0, 0) * speed * Time.deltaTime;
-        player.position = transform.position + movement;
+  
+        player.transform.localPosition = transform.localPosition + movement;
     }
 }
