@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3867640259998206291}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf58ef8bd0525ef4eb1f1bee15ea61f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 10
   controllerInput: Horizontal1
   keysInput: Horizontal1B
   controller: 0
@@ -191,8 +191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebf229d60884e484c8a76969ddfaa535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpVelocity: 11.28
-  input: Jump1
+  jumpVelocity: 9
 --- !u!50 &3867640259998206294
 Rigidbody2D:
   serializedVersion: 4
