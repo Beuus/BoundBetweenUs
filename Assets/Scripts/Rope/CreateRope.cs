@@ -18,8 +18,12 @@ public class CreateRope : MonoBehaviour
     public bool isBreak = false;
     public bool isUnbreakable = false;
 
+    public Color[] colorsByHit;
+    public float brightFactor;
+
     private float sizeSprite;
     private float numberOfSprite;
+    private int lives = 0;
 
     private List<GameObject> nodes;
     private List<HingeJoint2D> springs;
@@ -97,6 +101,8 @@ public class CreateRope : MonoBehaviour
 
         springs.Add(hinges[0]);
         springs.Add(hinges[1]);  
+        
+        ChangeRopeColor(oldDistance);
     }
 
     private void Update()
@@ -112,6 +118,7 @@ public class CreateRope : MonoBehaviour
 
     private void UpdateRope(){
         newDistance = Mathf.Abs(fixedNodeOne.transform.position.x - fixedNodeTwo.transform.position.x);
+        ChangeRopeColor(newDistance);
         float expandDistance = (newDistance - oldDistance);
         
         if(expandDistance > sizeSprite){
@@ -175,21 +182,29 @@ public class CreateRope : MonoBehaviour
     private void BreakRope(){
         GameObject.Destroy(nodes[nodes.Count / 2]);
         isBreak = true;
-        //FindObjectOfType<GameManager>()
+        FindObjectOfType<GameManager>().GameOver();
     }
 
-    public void ChangeRopeColor(Color col){
+    public void ChangeRopeColor(float distance){
+        float h, s, v;
+        
+        Color col = colorsByHit[lives];
+        Color.RGBToHSV(col,out h,out s,out v);
+        v = 1-(Mathf.InverseLerp(1, breakDistance, distance)*0.4f);
+
+        col = Color.HSVToRGB(h, s, v);
+
         foreach (GameObject g in nodes)
         {
-            g.GetComponent<SpriteRenderer>().material.color = col;
+            g.GetComponent<SpriteRenderer>().color = col;
         }
     }
 
     public void RopeDamage(string n){
         
-        if(string.Equals(nameCollision,n)){
-            ropeLives--;
-            if(ropeLives <= 0){
+        if(!string.Equals(nameCollision,n)){
+            lives++;
+            if(lives >= (ropeLives)){
                 BreakRope();
             }
         }

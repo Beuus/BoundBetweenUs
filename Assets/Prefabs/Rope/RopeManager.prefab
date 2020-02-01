@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3955185732936051199}
   - component: {fileID: 3955185732936051193}
   m_Layer: 0
-  m_Name: RopeManager 1
+  m_Name: RopeManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -56,10 +56,15 @@ MonoBehaviour:
   - 10
   - 5
   - 5
-  ropeLives: 2
+  ropeLives: 3
   compressFactor: 1
   isBreak: 0
   isUnbreakable: 0
+  colorsByHit:
+  - {r: 0.3667524, g: 1, b: 0, a: 0}
+  - {r: 1, g: 0.7330102, b: 0, a: 0}
+  - {r: 1, g: 0.10015053, b: 0, a: 0}
+  brightFactor: 0
 --- !u!1001 &3955185732440367247
 PrefabInstance:
   m_ObjectHideFlags: 0
