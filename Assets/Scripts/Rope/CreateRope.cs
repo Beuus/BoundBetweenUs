@@ -118,7 +118,9 @@ public class CreateRope : MonoBehaviour
 
     private void UpdateRope(){
         newDistance = Mathf.Abs(fixedNodeOne.transform.position.x - fixedNodeTwo.transform.position.x);
-        ChangeRopeColor(newDistance);
+        if(!isUnbreakable){
+            ChangeRopeColor(newDistance);
+        }
         float expandDistance = (newDistance - oldDistance);
         
         if(expandDistance > sizeSprite){
@@ -182,7 +184,11 @@ public class CreateRope : MonoBehaviour
     private void BreakRope(){
         GameObject.Destroy(nodes[nodes.Count / 2]);
         isBreak = true;
+<<<<<<< Updated upstream
         FindObjectOfType<GameManager>().GameOver();
+=======
+        var gm = UnityEngine.Object.FindObjectOfType<GameManager>();
+>>>>>>> Stashed changes
     }
 
     public void ChangeRopeColor(float distance){
@@ -200,6 +206,15 @@ public class CreateRope : MonoBehaviour
         }
     }
 
+    public void SetWhiteColor(){
+        Color col = new Color(1, 1, 1);
+
+        foreach (GameObject g in nodes)
+        {
+            g.GetComponent<SpriteRenderer>().color = col;
+        }
+    }
+
     public void RopeDamage(string n){
         
         if(!string.Equals(nameCollision,n)){
@@ -209,6 +224,16 @@ public class CreateRope : MonoBehaviour
             }
         }
         nameCollision = n;
+    }
+
+    public void UnbreakableRopeOn(){
+        isUnbreakable = true;
+
+        SetWhiteColor();
+    }
+
+    public void UnbreakableRopeOff(){
+        isUnbreakable = false;
     }
 
     public void DecreaseDistanceRope(int level){

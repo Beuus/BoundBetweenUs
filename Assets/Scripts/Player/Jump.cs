@@ -18,10 +18,12 @@ public class Jump : MonoBehaviour
     public string input;
 
     private Rigidbody2D rb;
+    private Animator anim;
 
     void Start()
     {
         jumping = false;
+        anim = GetComponent<Animator>();
     }
 
     // Start is called before the first frame update
@@ -38,6 +40,7 @@ public class Jump : MonoBehaviour
         {
             jumping = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
+            anim.SetTrigger("jumped");
         }
     }
 
@@ -46,6 +49,7 @@ public class Jump : MonoBehaviour
         if (collision.gameObject.tag.Equals("Floor") || collision.gameObject.tag.Equals("Platform"))
         {
             jumping = false;
+            
         }
     }
 }
