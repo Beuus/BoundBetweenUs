@@ -43,5 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 28e8395f1b2c4814986a0350eb81f326, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistanceRope: 20
-  level: 1
+  rope: {fileID: 0}
+  level: 0

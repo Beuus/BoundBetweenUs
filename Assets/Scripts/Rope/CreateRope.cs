@@ -27,6 +27,7 @@ public class CreateRope : MonoBehaviour
     private float oldDistance;
     private float newDistance;
     private int side = 1;
+    private string nameCollision;
 
     private void Start()
     {
@@ -183,11 +184,15 @@ public class CreateRope : MonoBehaviour
         }
     }
 
-    public void RopeDamage(){
-        ropeLives--;
-        if(ropeLives <= 0){
-            BreakRope();
+    public void RopeDamage(string n){
+        
+        if(string.Equals(nameCollision,n)){
+            ropeLives--;
+            if(ropeLives <= 0){
+                BreakRope();
+            }
         }
+        nameCollision = n;
     }
 
     public void DecreaseDistanceRope(int level){
