@@ -10,9 +10,8 @@ public class CreateRope : MonoBehaviour
     public GameObject hingeNode;
     public GameObject doubleHingeNode;
 
-    public float distace;
     public float breakDistance;
-    public float minimunDistance;
+    public float maxDistance;
 
     private float sizeSprite;
     private float numberOfSprite;
@@ -97,6 +96,7 @@ public class CreateRope : MonoBehaviour
     private void Update()
     {
         UpdateRope();
+        CheckBreakRope(oldDistance);
     }
 
     private void UpdateRope(){
@@ -153,5 +153,11 @@ public class CreateRope : MonoBehaviour
             springs[1].anchor = new Vector3(sizeSprite / 2, 0, 0);
         }
 
+    }
+
+    private void CheckBreakRope(float distance){
+        if(distance > breakDistance){
+            GameObject.Destroy(nodes[nodes.Count / 2]);
+        }
     }
 }
