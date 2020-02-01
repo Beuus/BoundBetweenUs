@@ -16,19 +16,28 @@ public class GenerateFallingElements : MonoBehaviour
         initialPosition =   transform.position.x - GetComponent<BoxCollider2D>().bounds.size.x;
         finalPosition =     transform.position.x + GetComponent<BoxCollider2D>().bounds.size.x;
 
+     
+            StartCoroutine("GenerateElements");
+        
+       
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        StartCoroutine("GenerateElements");
+       
     }
 
     IEnumerator GenerateElements()
     {
-        GameObject g =Instantiate(elementToGenerate, new Vector3(Random.Range(initialPosition, finalPosition), transform.position.y, transform.position.z), Quaternion.identity);
-        g.transform.parent = this.transform;
-        yield return new WaitForSeconds(timeGeneration);
+        while (true) {
+            GameObject g = Instantiate(elementToGenerate, new Vector3(Random.Range(initialPosition, finalPosition), transform.position.y, transform.position.z), Quaternion.identity);
+            g.transform.parent = this.transform;
+            yield return new WaitForSeconds(timeGeneration);
+        }
+       
+        
         
     }
 }
