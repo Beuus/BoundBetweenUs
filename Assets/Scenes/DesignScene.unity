@@ -738,8 +738,7 @@ MonoBehaviour:
   hingeNode: {fileID: 598705158672012955, guid: c548711b5b73507468345468cdb1976d,
     type: 3}
   doubleHingeNode: {fileID: 0}
-  distace: 0
-  breakDistance: 0
+  breakDistance: 10
   minimunDistance: 0
 --- !u!1 &591598158783646819
 GameObject:
