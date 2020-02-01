@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,10 +11,12 @@ public class CreateRope : MonoBehaviour
     public GameObject hingeNode;
     public GameObject doubleHingeNode;
 
-    public float breakDistance;
-    public float maxDistance;
+    public float breakDistance=10;
+    public int ropeLives=2;
+    public float compressFactor=1;
 
-    public bool isBreak;
+    public bool isBreak = false;
+    public bool isUnbreakable = false;
 
     private float sizeSprite;
     private float numberOfSprite;
@@ -23,12 +26,10 @@ public class CreateRope : MonoBehaviour
 
     private float oldDistance;
     private float newDistance;
-    private int side;
+    private int side = 1;
 
     private void Start()
     {
-        side = 1;
-        isBreak = false;
         
         Vector2 sizeBox = sprite.GetComponent<BoxCollider2D>().bounds.size;
         sizeSprite = sizeBox.x;
@@ -101,7 +102,21 @@ public class CreateRope : MonoBehaviour
     {
         if(!isBreak){
             UpdateRope();
-            CheckBreakRope(oldDistance);
+
+            if(!isUnbreakable){
+                CheckBreakRope(oldDistance);
+            }
+            CheckUnbreak();
+        }
+    }
+
+    private void CheckUnbreak()
+    {
+        if(Input.GetButtonDown("RopeUnbreakable")){
+            isUnbreakable = true;
+        }
+        else if(Input.GetButtonUp("RopeUnbreakable")){
+            isUnbreakable = false;
         }
     }
 
@@ -114,7 +129,7 @@ public class CreateRope : MonoBehaviour
             side = -side;
             oldDistance = newDistance;
         }
-        else if(expandDistance < -sizeSprite){
+        else if(expandDistance < -sizeSprite/compressFactor){
             DeleteNode(side);
             side = -side;
             oldDistance = newDistance;
@@ -163,14 +178,26 @@ public class CreateRope : MonoBehaviour
 
     private void CheckBreakRope(float distance){
         if(distance > breakDistance){
-            GameObject.Destroy(nodes[nodes.Count / 2]);
+            BreakRope();
         }
+    }
+
+    private void BreakRope(){
+        GameObject.Destroy(nodes[nodes.Count / 2]);
+        isBreak = true;
     }
 
     public void ChangeRopeColor(Color col){
         foreach (GameObject g in nodes)
         {
             g.GetComponent<SpriteRenderer>().material.color = col;
+        }
+    }
+
+    public void RopeDamage(){
+        ropeLives--;
+        if(ropeLives <= 0){
+            BreakRope();
         }
     }
 }
