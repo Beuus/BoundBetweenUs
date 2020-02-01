@@ -18,6 +18,7 @@ public class Switch : MonoBehaviour
         {
             Debug.Log("Colliding");
             activated = true;
+            //Destroy(this.gameObject);
         }
     }
 }

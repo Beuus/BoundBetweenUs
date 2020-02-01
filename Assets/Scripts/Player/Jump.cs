@@ -15,7 +15,6 @@ public class Jump : MonoBehaviour
     public float  jumpVelocity;
 
     bool jumping;
-    public string input;
 
     private Rigidbody2D rb;
 
@@ -34,7 +33,7 @@ public class Jump : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetButtonDown(input) && !jumping)
+        if (Input.GetButtonDown("Jump") && !jumping)
         {
             jumping = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
