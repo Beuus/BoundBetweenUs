@@ -9,9 +9,9 @@ public class CreateRope : MonoBehaviour
     public GameObject fixedNodeTwo;
     public GameObject sprite;
     public GameObject hingeNode;
-    public GameObject doubleHingeNode;
 
     public float breakDistance=10;
+    public float[] distanceByLevel;
     public int ropeLives=2;
     public float compressFactor=1;
 
@@ -30,7 +30,7 @@ public class CreateRope : MonoBehaviour
 
     private void Start()
     {
-        
+        breakDistance = distanceByLevel[0];
         Vector2 sizeBox = sprite.GetComponent<BoxCollider2D>().bounds.size;
         sizeSprite = sizeBox.x;
 
@@ -188,5 +188,9 @@ public class CreateRope : MonoBehaviour
         if(ropeLives <= 0){
             BreakRope();
         }
+    }
+
+    public void DecreaseDistanceRope(int level){
+        breakDistance = distanceByLevel[level];
     }
 }
