@@ -32,6 +32,15 @@ public class PlayerController : MonoBehaviour
         if (Input.GetAxis(controllerInput) != 0 || Input.GetAxis(keysInput) != 0)
         {
             anim.SetBool("walking", true);
+            if (Input.GetAxis(controllerInput) < 0 || Input.GetAxis(keysInput) < 0)
+            {
+                transform.localScale = new Vector3 (-1, 1, 1); 
+
+            }
+            else
+            {
+                transform.localScale = new Vector3(1, 1, 1);
+            }
         }
         else {
             anim.SetBool("walking", false);

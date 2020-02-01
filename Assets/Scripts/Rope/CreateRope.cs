@@ -190,7 +190,7 @@ public class CreateRope : MonoBehaviour
         isBreak = true;
 
         FindObjectOfType<GameManager>().GameOver();
-        var gm = UnityEngine.Object.FindObjectOfType<GameManager>();
+
 
     }
 
