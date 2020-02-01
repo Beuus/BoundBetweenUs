@@ -18,6 +18,7 @@ public class FallingPlatform : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player")
         {
+            Debug.Log("Collision");
             StartCoroutine(FallAfterDelay());
         }
     }
