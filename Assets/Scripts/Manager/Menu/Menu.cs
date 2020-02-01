@@ -18,7 +18,7 @@ public class Menu : MonoBehaviour
     }
     public void HandleOnStateChange()
     {
-        Debug.Log("Change!!");
+        //Debug.Log("Change!!");
     }
 
     public void StartGame()

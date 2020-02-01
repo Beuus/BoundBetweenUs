@@ -1542,7 +1542,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2135034089}
-  - component: {fileID: 2135034090}
   m_Layer: 0
   m_Name: SelectorPlayer
   m_TagString: Untagged
@@ -1568,17 +1567,3 @@ Transform:
   m_Father: {fileID: 1254835606}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2135034090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2135034088}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 96e80170feb317c479cd0e5b9b71bd22, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player1: 0
-  player2: 0
