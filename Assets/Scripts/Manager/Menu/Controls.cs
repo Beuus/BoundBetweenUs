@@ -21,7 +21,7 @@ public class Controls : MonoBehaviour
     }
     public void HandleOnStateChange()
     {
-        Debug.Log("Change!!");
+        //Debug.Log("Change!!");
     }
 
     public void BackMenu()
