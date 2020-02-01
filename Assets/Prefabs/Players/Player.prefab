@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 3867640259998206291}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Player1
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpVelocity: 9
+  input: Jump1
 --- !u!50 &3867640259998206294
 Rigidbody2D:
   serializedVersion: 4
