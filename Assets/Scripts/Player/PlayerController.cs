@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public float speed;
-    public string input;
+    public string controllerInput;
+    public string keysInput;
+    public bool controller;
 
     private Rigidbody2D player;
 
@@ -18,7 +20,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float horizontalAxis = Input.GetAxis(input);
+        float horizontalAxis;
+        if (controller)
+            horizontalAxis = Input.GetAxis(controllerInput);
+        else
+            horizontalAxis = Input.GetAxis(keysInput);
         Vector3 movement = new Vector3(horizontalAxis, 0, 0) * speed * Time.deltaTime;
         player.position = transform.position + movement;
     }

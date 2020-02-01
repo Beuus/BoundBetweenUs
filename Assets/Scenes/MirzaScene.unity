@@ -581,7 +581,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1061901460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpVelocity: 5
-  jumpKey: w
+  input: Jump2
 --- !u!114 &1061901461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,7 +609,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  input: Horizontal2
+  controllerInput: Horizontal2
+  keysInput: Horizontal2B
+  controller: 0
 --- !u!23 &1061901462
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -855,7 +857,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!23 &1457071657
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -930,7 +932,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 30
-  input: Horizontal1
+  controllerInput: Horizontal1
+  keysInput: Horizontal1B
+  controller: 1
 --- !u!61 &1457071661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -970,7 +974,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpVelocity: 5
-  jumpKey: up
+  input: Jump1
 --- !u!1 &1470334059
 GameObject:
   m_ObjectHideFlags: 0
