@@ -15,7 +15,6 @@ public class CameraController : MonoBehaviour
     void Start()
     {
         fov = Camera.main.orthographicSize;
-        Debug.Log(fov);
         offset = ((transform.position - player1.transform.position) + (transform.position - player2.transform.position)) / 2;
     }
 
