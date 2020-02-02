@@ -14,9 +14,12 @@ public class CreateRope : MonoBehaviour
     public float[] distanceByLevel;
     public int ropeLives=2;
     public float compressFactor=1;
+    public float timePowerUnbreakable = 1;
+    public float timeBetweenPower = 3;
 
     public bool isBreak = false;
     public bool isUnbreakable = false;
+    public bool isUnbreakableAvailable = true;
 
     public Color[] colorsByHit;
     public float brightFactor;
@@ -32,6 +35,7 @@ public class CreateRope : MonoBehaviour
     private float newDistance;
     private int side = 1;
     private string nameCollision;
+
 
     private void Start()
     {
@@ -226,16 +230,28 @@ public class CreateRope : MonoBehaviour
     }
 
     public void UnbreakableRopeOn(){
-        isUnbreakable = true;
-
-        SetWhiteColor();
+        if(isUnbreakableAvailable){
+            isUnbreakable = true;
+            StartCoroutine("ActiveUnbreakable");
+            SetWhiteColor();
+        }
     }
 
-    public void UnbreakableRopeOff(){
-        isUnbreakable = false;
-    }
 
     public void DecreaseDistanceRope(int level){
         breakDistance = distanceByLevel[level];
+    }
+
+    IEnumerator ActiveUnbreakable()
+    {
+        yield return new WaitForSeconds(timePowerUnbreakable);
+        isUnbreakable = false;
+        isUnbreakableAvailable = false;
+        StartCoroutine("EnableUnbreakable");
+    }
+
+    IEnumerator EnableUnbreakable(){
+        yield return new WaitForSeconds(timeBetweenPower);
+        isUnbreakableAvailable = true;
     }
 }
