@@ -16,14 +16,17 @@ public class Jump : MonoBehaviour
 
     bool jumping;
     public string input;
+    public AudioClip clipJump;
 
     private Rigidbody2D rb;
     private Animator anim;
+    private AudioSource sourceSound;
 
     void Start()
     {
         jumping = false;
         anim = GetComponent<Animator>();
+        sourceSound = GetComponent<AudioSource>();
     }
 
     // Start is called before the first frame update
@@ -41,6 +44,8 @@ public class Jump : MonoBehaviour
             jumping = true;
             GetComponent<Rigidbody2D>().velocity = Vector2.up * jumpVelocity;
             anim.SetTrigger("jumped");
+            sourceSound.clip = clipJump;
+            sourceSound.Play();
         }
     }
 

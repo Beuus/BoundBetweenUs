@@ -21,8 +21,15 @@ public class CreateRope : MonoBehaviour
     public bool isUnbreakable = false;
     public bool isUnbreakableAvailable = true;
 
+
     public Color[] colorsByHit;
     public float brightFactor;
+
+    public AudioClip unbreakableSound;
+    public AudioClip hit;
+    public AudioClip breakRope;
+
+    private AudioSource soundSource;
 
     private float sizeSprite;
     private float numberOfSprite;
@@ -107,6 +114,8 @@ public class CreateRope : MonoBehaviour
         springs.Add(hinges[1]);  
         
         ChangeRopeColor(oldDistance);
+
+        soundSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -186,10 +195,14 @@ public class CreateRope : MonoBehaviour
     }
 
     private void BreakRope(){
+        soundSource.clip = breakRope;
+        soundSource.Play();
+        
         GameObject.Destroy(nodes[nodes.Count / 2]);
         isBreak = true;
-
+     
         FindObjectOfType<GameManager>().GameOver();
+
 
 
     }
@@ -224,8 +237,12 @@ public class CreateRope : MonoBehaviour
             if (!string.Equals(nameCollision, n))
             {
                 lives++;
+                soundSource.clip = hit;
+                soundSource.Play();
+
                 if (lives >= (ropeLives))
                 {
+                    
                     BreakRope();
                 }
             }
@@ -239,6 +256,8 @@ public class CreateRope : MonoBehaviour
             isUnbreakable = true;
             StartCoroutine("ActiveUnbreakable");
             SetWhiteColor();
+            soundSource.clip = unbreakableSound;
+            soundSource.Play();
         }
     }
 
