@@ -207,7 +207,7 @@ AnimatorState:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Boy_Idle
-  m_Speed: 0.18
+  m_Speed: 0.07
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 2994474974322038655}
