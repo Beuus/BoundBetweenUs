@@ -134,7 +134,8 @@ MonoBehaviour:
   controller: 0
   boySprite: {fileID: 21300000, guid: 995f01ff8c126b540ad4fb2da93f882a, type: 3}
   girlSprite: {fileID: 21300000, guid: 215627aeb24561a489a8082b7f62a79c, type: 3}
-  boyAnim: {fileID: 0}
+  boyAnim: {fileID: 9100000, guid: b28c41e32cc67f140b6f12a540994f3f, type: 2}
+  girlAnim: {fileID: 9100000, guid: 7fae523f0a9ec6840b636a1db0fa3931, type: 2}
 --- !u!114 &3867640259998206288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -257,7 +258,7 @@ Animator:
   m_GameObject: {fileID: 3867640259998206297}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7fae523f0a9ec6840b636a1db0fa3931, type: 2}
+  m_Controller: {fileID: 9100000, guid: b28c41e32cc67f140b6f12a540994f3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
