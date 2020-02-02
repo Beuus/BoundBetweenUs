@@ -5,6 +5,8 @@ using UnityEngine;
 public class TextTrigger : MonoBehaviour
 {
     public bool activated;
+    public string textToDisplay;
+    public float duration;
 
     // Start is called before the first frame update
     void start()
