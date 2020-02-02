@@ -6,6 +6,9 @@ public class Switch : MonoBehaviour
 {
     public bool activated;
     public float time = 10;
+    public string playerTag1;
+    public string playerTag2;
+
 
     // Start is called before the first frame update
     void start()
@@ -15,7 +18,7 @@ public class Switch : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals(playerTag1) || collision.gameObject.tag.Equals(playerTag2))
         {
             Debug.Log("Colliding");
             activated = true;

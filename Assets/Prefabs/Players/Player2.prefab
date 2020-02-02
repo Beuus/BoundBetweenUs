@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 802831387}
   m_Layer: 0
   m_Name: Player2
-  m_TagString: Player
+  m_TagString: Player2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cf58ef8bd0525ef4eb1f1bee15ea61f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 5
   controllerInput: Horizontal2
   keysInput: Horizontal2B
   controller: 0

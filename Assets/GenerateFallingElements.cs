@@ -5,7 +5,7 @@ using UnityEngine;
 public class GenerateFallingElements : MonoBehaviour
 {
     public GameObject elementToGenerate;
-    public int timeGeneration;
+    public float timeGeneration;
 
     private float initialPosition;
     private float finalPosition;
