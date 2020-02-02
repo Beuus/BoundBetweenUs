@@ -29,11 +29,11 @@ public class PlayerController : MonoBehaviour
         if (g.player1 == PlayerGenre.BOY)
         {
             GetComponent<SpriteRenderer>().sprite = boySprite;
-            GetComponent<Animator>().runtimeAnimatorController = boyAnim;
+            //GetComponent<Animator>().runtimeAnimatorController = boyAnim;
         }
         else{
             GetComponent<SpriteRenderer>().sprite = girlSprite;
-            GetComponent<Animator>().runtimeAnimatorController = girlAnim;
+            //GetComponent<Animator>().runtimeAnimatorController = girlAnim;
 
         }
     }
