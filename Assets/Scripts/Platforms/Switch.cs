@@ -9,14 +9,13 @@ public class Switch : MonoBehaviour
     public string playerTag1;
     public string playerTag2;
 
-
     // Start is called before the first frame update
     void start()
     {
         activated = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag.Equals(playerTag1) || collision.gameObject.tag.Equals(playerTag2))
         {

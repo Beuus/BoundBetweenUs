@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 // Game States
-public enum GameState { MAIN_MENU, CONTROLS, CREDITS, CHAMPIONS, GAME, PAUSED, GAMEOVER }
+public enum GameState { MAIN_MENU, CONTROLS, CREDITS, CHAMPIONS, GAME, PAUSED, GAMEOVER, WIN }
 
 public enum PlayerGenre { GIRL, BOY }
 
@@ -52,5 +52,12 @@ public class GameManager : MonoBehaviour
 		this.SetGameState(GameState.GAME);
 		Debug.Log(this.gameState);
 		SceneManager.LoadScene("RetryScene");
+	}
+
+	public void GameWin()
+	{
+		this.SetGameState(GameState.WIN);
+		Debug.Log(this.gameState);
+		SceneManager.LoadScene("WinScene");
 	}
 }
