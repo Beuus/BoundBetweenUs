@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PlayerSelector : MonoBehaviour
 {
@@ -25,46 +26,14 @@ public class PlayerSelector : MonoBehaviour
         //Debug.Log("Change!!");
     }
 
-    public void ChangePlayer1()
-    {
-        if (_gameManager.player1 == GameManager.PlayerGenre.GIRL)
-        {
-            _gameManager.player1 = GameManager.PlayerGenre.BOY;
-        }
-        else
-        {
-            _gameManager.player1 = GameManager.PlayerGenre.GIRL;
-        }
-
-        //Cambiamos el sprite
-        Debug.Log("Player 1: " + _gameManager.player1.ToString());
-    }
-
-
-    public void ChangePlayer2()
-    {
-        if (_gameManager.player2 == GameManager.PlayerGenre.GIRL)
-        {
-            _gameManager.player2 = GameManager.PlayerGenre.BOY;
-        }
-        else
-        {
-            _gameManager.player2 = GameManager.PlayerGenre.GIRL;
-        }
-
-
-        //Cambiamos el sprite
-        Debug.Log("Player 2: " + _gameManager.player2.ToString());
-    }
-
 
     public void StartGame()
     {
         //start game scene
-        _gameManager.SetGameState(GameState.CONTROLS);
+        _gameManager.SetGameState(GameState.GAME);
         Debug.Log(_gameManager.gameState);
 
-        //SceneManager.LoadScene("Game1");
+        SceneManager.LoadScene("DesignScene");
     }
 
     public void BackMenu()
