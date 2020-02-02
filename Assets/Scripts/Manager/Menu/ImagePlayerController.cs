@@ -27,6 +27,8 @@ public class ImagePlayerController : MonoBehaviour
 
         player1Images[0].SetActive(false);
         player2Images[1].SetActive(false);
+        _gameManager.player1 = PlayerGenre.BOY;
+        _gameManager.player2 = PlayerGenre.GIRL;
     }
 
     public void HandleOnStateChange()
@@ -36,37 +38,37 @@ public class ImagePlayerController : MonoBehaviour
 
     public void ChangePlayerOne()
     {
-        if (_gameManager.player1 == GameManager.PlayerGenre.GIRL)
+        if (_gameManager.player1 == PlayerGenre.GIRL)
+        {
+            player1Images[0].SetActive(false);
+            player1Images[1].SetActive(true);
+
+            _gameManager.player1 = PlayerGenre.BOY;
+        }
+        else
         {
             player1Images[0].SetActive(true);
             player1Images[1].SetActive(false);
 
-            _gameManager.player1 = GameManager.PlayerGenre.BOY;
-        }
-        else
-        {
-            player1Images[1].SetActive(true);
-            player1Images[0].SetActive(false);
-
-            _gameManager.player1 = GameManager.PlayerGenre.GIRL;
+            _gameManager.player1 = PlayerGenre.GIRL;
         }
     } 
     
     public void ChangePlayerTwo()
     {
-        if (_gameManager.player2 == GameManager.PlayerGenre.GIRL)
+        if (_gameManager.player2 == PlayerGenre.GIRL)
+        {
+            player2Images[0].SetActive(false);
+            player2Images[1].SetActive(true);
+
+            _gameManager.player2 = PlayerGenre.BOY;
+        }
+        else
         {
             player2Images[0].SetActive(true);
             player2Images[1].SetActive(false);
 
-            _gameManager.player2 = GameManager.PlayerGenre.BOY;
-        }
-        else
-        {
-            player2Images[1].SetActive(true);
-            player2Images[0].SetActive(false);
-
-            _gameManager.player2 = GameManager.PlayerGenre.GIRL;
+            _gameManager.player2 = PlayerGenre.GIRL;
         }
     }
 

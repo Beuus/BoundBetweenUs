@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 591598160484442198}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0, y: -0.275, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 3867640259998206293}
@@ -109,7 +109,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3867640259998206297}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: -1.49, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 591598160484442199}
@@ -132,6 +132,10 @@ MonoBehaviour:
   controllerInput: Horizontal1
   keysInput: Horizontal1B
   controller: 0
+  boySprite: {fileID: 21300000, guid: 995f01ff8c126b540ad4fb2da93f882a, type: 3}
+  girlSprite: {fileID: 21300000, guid: 215627aeb24561a489a8082b7f62a79c, type: 3}
+  boyAnim: {fileID: 9100000, guid: b28c41e32cc67f140b6f12a540994f3f, type: 2}
+  girlAnim: {fileID: 9100000, guid: 7fae523f0a9ec6840b636a1db0fa3931, type: 2}
 --- !u!114 &3867640259998206288
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -191,7 +195,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 0.5, y: 1.6}
   m_EdgeRadius: 0
 --- !u!212 &1633778477
 SpriteRenderer:
@@ -231,7 +235,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: -8900289046753012730, guid: 01c1e3be080d14f43a1ffc0f2351025a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -254,7 +258,7 @@ Animator:
   m_GameObject: {fileID: 3867640259998206297}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 7fae523f0a9ec6840b636a1db0fa3931, type: 2}
+  m_Controller: {fileID: 9100000, guid: b28c41e32cc67f140b6f12a540994f3f, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

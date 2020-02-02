@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GenerateFallingElements : MonoBehaviour
 {
-    public GameObject elementToGenerate;
+    public GameObject []elementToGenerate;
     public float timeGeneration;
 
     private float initialPosition;
@@ -33,7 +33,7 @@ public class GenerateFallingElements : MonoBehaviour
     IEnumerator GenerateElements()
     {
         while (true) {
-            GameObject g = Instantiate(elementToGenerate, new Vector3(Random.Range(initialPosition, finalPosition), transform.position.y, transform.position.z), Quaternion.identity);
+            GameObject g = Instantiate(elementToGenerate[Random.Range(0,elementToGenerate.Length)], new Vector3(Random.Range(initialPosition, finalPosition), transform.position.y, transform.position.z), Quaternion.identity);
             g.transform.parent = this.transform;
             g.transform.name = g.transform.name + counter;
             ++counter;

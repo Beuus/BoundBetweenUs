@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 // Game States
 public enum GameState { MAIN_MENU, CONTROLS, CREDITS, CHAMPIONS, GAME, PAUSED, GAMEOVER }
+
 public enum PlayerGenre { GIRL, BOY }
 
 public delegate void OnStateChangeHandler();
