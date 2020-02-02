@@ -13,9 +13,6 @@ public class UnbreakableRope : MonoBehaviour
         {
             GameObject.Find("RopeManager").GetComponent<CreateRope>().UnbreakableRopeOn();
         }
-        else if (Input.GetButtonUp(input))
-        {
-            GameObject.Find("RopeManager").GetComponent<CreateRope>().UnbreakableRopeOff();
-        }
+
     }
 }
