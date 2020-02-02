@@ -1,7 +1,79 @@
 fileFormatVersion: 2
 guid: 2b93bf2a30a5ded4a8c418c66c2bfcb6
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -2468252747399265006
+    second: CICLO SALTO_0
+  - first:
+      213: -7961015969262229308
+    second: CICLO SALTO_1
+  - first:
+      213: -2655671817087177352
+    second: CICLO SALTO_2
+  - first:
+      213: -4231462957541963710
+    second: CICLO SALTO_3
+  - first:
+      213: 2194492004397226837
+    second: CICLO SALTO_4
+  - first:
+      213: -580156801815588578
+    second: CICLO SALTO_5
+  - first:
+      213: -7648425890186152156
+    second: CICLO SALTO_6
+  - first:
+      213: 6686981603055048447
+    second: CICLO SALTO_7
+  - first:
+      213: 7407905109165580768
+    second: CICLO SALTO_8
+  - first:
+      213: -5377067950805194696
+    second: CICLO SALTO_9
+  - first:
+      213: 8276809344570411641
+    second: CICLO SALTO_10
+  - first:
+      213: 3363117188801222870
+    second: CICLO SALTO_11
+  - first:
+      213: -6338883169430648339
+    second: CICLO SALTO_12
+  - first:
+      213: 7598848376669174256
+    second: CICLO SALTO_13
+  - first:
+      213: 7917643243297848342
+    second: CICLO SALTO_14
+  - first:
+      213: 207562044886772397
+    second: CICLO SALTO_15
+  - first:
+      213: 306878673282156799
+    second: CICLO SALTO_16
+  - first:
+      213: 618436377364888231
+    second: CICLO SALTO_17
+  - first:
+      213: -9151211977824803535
+    second: CICLO SALTO_18
+  - first:
+      213: -2087674741821975944
+    second: CICLO SALTO_19
+  - first:
+      213: 7889210019428725720
+    second: CICLO SALTO_20
+  - first:
+      213: -2526999371765241577
+    second: CICLO SALTO_21
+  - first:
+      213: -3206206489948753979
+    second: CICLO SALTO_22
+  - first:
+      213: -5095415994231795688
+    second: CICLO SALTO_23
   externalObjects: {}
   serializedVersion: 10
   mipmaps:
@@ -40,12 +112,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -70,9 +142,525 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: CICLO SALTO_0
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 1562
+        width: 66
+        height: 204
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 215826f14310fbdd0800000000000000
+      internalID: -2468252747399265006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_1
+      rect:
+        serializedVersion: 2
+        x: 350
+        y: 1565
+        width: 66
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c8a9ecb72ac48190800000000000000
+      internalID: -7961015969262229308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_2
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1567
+        width: 66
+        height: 197
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87da08e7d88252bd0800000000000000
+      internalID: -2655671817087177352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_3
+      rect:
+        serializedVersion: 2
+        x: 862
+        y: 1571
+        width: 66
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248cc7ffbd2d645c0800000000000000
+      internalID: -4231462957541963710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_4
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1582
+        width: 78
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b1880e9d6647e10800000000000000
+      internalID: 2194492004397226837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_5
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1582
+        width: 74
+        height: 167
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1151c9667ed2f7f0800000000000000
+      internalID: -580156801815588578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_6
+      rect:
+        serializedVersion: 2
+        x: 1402
+        y: 1582
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 427bd8c0d255bd590800000000000000
+      internalID: -7648425890186152156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_7
+      rect:
+        serializedVersion: 2
+        x: 1624
+        y: 1579
+        width: 78
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff61badb65eeccc50800000000000000
+      internalID: 6686981603055048447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_8
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1320
+        width: 86
+        height: 177
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e1ad91b27a2ec660800000000000000
+      internalID: 7407905109165580768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_9
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 1349
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8386e1b0031d065b0800000000000000
+      internalID: -5377067950805194696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_10
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 1318
+        width: 88
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97ac0c81f322dd270800000000000000
+      internalID: 8276809344570411641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_11
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 1349
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d8d180c3413cae20800000000000000
+      internalID: 3363117188801222870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_12
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 1316
+        width: 99
+        height: 187
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de9426d9753c708a0800000000000000
+      internalID: -6338883169430648339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_13
+      rect:
+        serializedVersion: 2
+        x: 595
+        y: 1347
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f97b619658847960800000000000000
+      internalID: 7598848376669174256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1353
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61c3a0f849e11ed60800000000000000
+      internalID: 7917643243297848342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_15
+      rect:
+        serializedVersion: 2
+        x: 846
+        y: 1351
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daa6452849861e200800000000000000
+      internalID: 207562044886772397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_16
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 1326
+        width: 96
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff840260780424400800000000000000
+      internalID: 306878673282156799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_17
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1319
+        width: 81
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa730dcb90259800800000000000000
+      internalID: 618436377364888231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_18
+      rect:
+        serializedVersion: 2
+        x: 1369
+        y: 1316
+        width: 77
+        height: 185
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 135e37df03d500180800000000000000
+      internalID: -9151211977824803535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_19
+      rect:
+        serializedVersion: 2
+        x: 1631
+        y: 1308
+        width: 66
+        height: 201
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 872552f12e61703e0800000000000000
+      internalID: -2087674741821975944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_20
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1347
+        width: 11
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3708eb6ba1c7d60800000000000000
+      internalID: 7889210019428725720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_21
+      rect:
+        serializedVersion: 2
+        x: 345
+        y: 1342
+        width: 4
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7192c42c57b4eecd0800000000000000
+      internalID: -2526999371765241577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_22
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1321
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cf6d024f244183d0800000000000000
+      internalID: -3206206489948753979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CICLO SALTO_23
+      rect:
+        serializedVersion: 2
+        x: 865
+        y: 1320
+        width: 6
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81058f066227949b0800000000000000
+      internalID: -5095415994231795688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
