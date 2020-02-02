@@ -7,7 +7,6 @@ public class ImagePlayerController : MonoBehaviour
 {
     public GameObject[] player1Images;
     public GameObject[] player2Images;
-    public int player;
     private GameManager _gameManager;
 
     
