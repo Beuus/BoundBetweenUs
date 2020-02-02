@@ -12,7 +12,8 @@ public class PlayerController : MonoBehaviour
 
     public Sprite boySprite;
     public Sprite girlSprite;
-    public Animator boyAnim;
+    public RuntimeAnimatorController boyAnim;
+    public RuntimeAnimatorController girlAnim;
 
     private Rigidbody2D player;
     private Animator anim;
@@ -28,9 +29,11 @@ public class PlayerController : MonoBehaviour
         if (g.player1 == PlayerGenre.BOY)
         {
             GetComponent<SpriteRenderer>().sprite = boySprite;
+            GetComponent<Animator>().runtimeAnimatorController = boyAnim;
         }
         else{
             GetComponent<SpriteRenderer>().sprite = girlSprite;
+            GetComponent<Animator>().runtimeAnimatorController = girlAnim;
 
         }
     }

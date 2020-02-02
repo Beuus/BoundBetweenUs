@@ -5,8 +5,6 @@ using UnityEngine.UI;
 
 public class TextDisplay : MonoBehaviour
 {
-    public string textToDisplay;
-    public float duration;
     public GameObject trigger;
 
     private Text textComponent;
@@ -16,7 +14,7 @@ public class TextDisplay : MonoBehaviour
     void Start()
     {
         textComponent = GetComponent<Text>();
-        textComponent.text = textToDisplay;
+        textComponent.text = trigger.GetComponent<TextTrigger>().textToDisplay;
         textComponent.enabled = false;
     }
 
@@ -26,7 +24,7 @@ public class TextDisplay : MonoBehaviour
         {
             timer += Time.deltaTime;
             Debug.Log("Time Displaying: " + timer);
-            if (timer >= duration)
+            if (timer >= trigger.GetComponent<TextTrigger>().duration)
             {
                 textComponent.enabled = false;
                 timer = 0.0f;
@@ -34,7 +32,7 @@ public class TextDisplay : MonoBehaviour
             }
             else
             {
-                Debug.Log("Displaying text: " + textToDisplay);
+                Debug.Log("Displaying text: " + trigger.GetComponent<TextTrigger>().textToDisplay);
                 textComponent.enabled = true;
             }
         }
