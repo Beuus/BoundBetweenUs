@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class TextDisplay : MonoBehaviour
 {
     public string textToDisplay;
-    public GameObject trigger; 
+    public GameObject trigger;
 
     private Text textComponent;
+    private float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +21,22 @@ public class TextDisplay : MonoBehaviour
 
     void Update()
     {
+
         if (trigger.GetComponent<TextTrigger>().activated)
         {
-            Debug.Log("Displaying text: " + textToDisplay);
-            textComponent.enabled = true;
+            timer += Time.deltaTime;
+            Debug.Log("Time Displaying: " + timer);
+            if (timer >= trigger.GetComponent<TextTrigger>().time)
+            {
+                textComponent.enabled = false;
+                timer = 0.0f;
+                trigger.GetComponent<TextTrigger>().activated = false;
+            }
+            else
+            {
+                Debug.Log("Displaying text: " + textToDisplay);
+                textComponent.enabled = true;
+            }
         }
     }
 }
