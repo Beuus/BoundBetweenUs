@@ -19,7 +19,7 @@ public class CameraController : MonoBehaviour
         fov = Camera.main.orthographicSize+fovOffset;
         Debug.Log(fov);
         offset = ((transform.position - player1.transform.position) + (transform.position - player2.transform.position)) / 2;
-        offset = offset + new Vector3(0, offsetHigh, 0);
+        //offset = offset + new Vector3(0, offsetHigh, 0);
     }
 
     // Update is called once per frame
