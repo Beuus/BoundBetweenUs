@@ -9,9 +9,6 @@ public class Switch : MonoBehaviour
     public string playerTag1;
     public string playerTag2;
 
-  
-
-
     // Start is called before the first frame update
     void start()
     {
