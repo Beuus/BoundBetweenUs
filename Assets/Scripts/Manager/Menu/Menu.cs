@@ -42,6 +42,13 @@ public class Menu : MonoBehaviour
         Debug.Log(_gameManager.gameState);
         SceneManager.LoadScene("Controls");
     }
+    public void CreditsGame()
+    {
+        //start game scene
+        _gameManager.SetGameState(GameState.CREDITS);
+        Debug.Log(_gameManager.gameState);
+        SceneManager.LoadScene("Credits");
+    }
 
 
     public void Quit()

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 // Game States
-public enum GameState { MAIN_MENU, CONTROLS, CHAMPIONS, GAME, PAUSED, GAMEOVER }
+public enum GameState { MAIN_MENU, CONTROLS, CREDITS, CHAMPIONS, GAME, PAUSED, GAMEOVER }
 
 public delegate void OnStateChangeHandler();
 
