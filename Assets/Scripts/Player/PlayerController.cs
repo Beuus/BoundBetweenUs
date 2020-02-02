@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
@@ -8,6 +9,10 @@ public class PlayerController : MonoBehaviour
     public string controllerInput;
     public string keysInput;
     public bool controller;
+
+    public Sprite boySprite;
+    public Sprite girlSprite;
+    public Animator boyAnim;
 
     private Rigidbody2D player;
     private Animator anim;
@@ -17,6 +22,17 @@ public class PlayerController : MonoBehaviour
     {
         player = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+
+        GameManager g = FindObjectOfType<GameManager>();
+
+        if (g.player1 == PlayerGenre.BOY)
+        {
+            GetComponent<SpriteRenderer>().sprite = boySprite;
+        }
+        else{
+            GetComponent<SpriteRenderer>().sprite = girlSprite;
+
+        }
     }
 
     // Update is called once per frame
