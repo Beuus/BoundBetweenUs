@@ -99,3 +99,5 @@ MonoBehaviour:
   player1: {fileID: 0}
   player2: {fileID: 0}
   cameraFactor: 0.5
+  fovOffset: 2
+  offsetHigh: 5
