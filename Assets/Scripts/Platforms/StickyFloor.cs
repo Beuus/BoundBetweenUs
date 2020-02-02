@@ -16,7 +16,7 @@ public class StickyFloor : MonoBehaviour
             m_transformToAttach = transform;
     }
 
-    void OnCollisionStay2D(Collision2D other)
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.transform.tag == "Player")
         {
@@ -27,6 +27,7 @@ public class StickyFloor : MonoBehaviour
             if (vectorCollision.normalized.y > 0)
             {
                 other.transform.parent = transform;
+                //other.transform.localScale = Vector3.one;
             }
         }
 
