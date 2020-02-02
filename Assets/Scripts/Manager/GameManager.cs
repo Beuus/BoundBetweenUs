@@ -6,12 +6,12 @@ using UnityEngine.UI;
 
 // Game States
 public enum GameState { MAIN_MENU, CONTROLS, CREDITS, CHAMPIONS, GAME, PAUSED, GAMEOVER }
+public enum PlayerGenre { GIRL, BOY }
 
 public delegate void OnStateChangeHandler();
 
 public class GameManager : MonoBehaviour
 {
-	public enum PlayerGenre { GIRL, BOY }
 
 	public PlayerGenre player1;
 	public PlayerGenre player2;
