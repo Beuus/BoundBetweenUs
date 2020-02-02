@@ -10,7 +10,8 @@ public class PlayerController : MonoBehaviour
     public string keysInput;
     public bool controller;
 
-    public Image boySprite;
+    public Sprite boySprite;
+    public Sprite girlSprite;
     public Animator boyAnim;
 
     private Rigidbody2D player;
@@ -23,11 +24,14 @@ public class PlayerController : MonoBehaviour
         anim = GetComponent<Animator>();
 
         GameManager g = FindObjectOfType<GameManager>();
-        if(transform.tag == "Player1"){
-            if (g.player1 == PlayerGenre.BOY)
-            {
-                
-            }
+
+        if (g.player1 == PlayerGenre.BOY)
+        {
+            GetComponent<SpriteRenderer>().sprite = boySprite;
+        }
+        else{
+            GetComponent<SpriteRenderer>().sprite = girlSprite;
+
         }
     }
 
