@@ -10,6 +10,10 @@ public class StickyFloor : MonoBehaviour
     public Transform m_transformToAttach;
     public Quaternion rotation;
 
+    public string playerTag1;
+    public string playerTag2;
+
+
     void Start()
     {
         if (m_transformToAttach == null)
@@ -18,7 +22,7 @@ public class StickyFloor : MonoBehaviour
 
     void OnCollisionStay2D(Collision2D other)
     {
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == playerTag1 || other.transform.tag == playerTag2)
         {
             Rigidbody2D player = other.gameObject.GetComponent<Rigidbody2D>();
 
@@ -35,7 +39,7 @@ public class StickyFloor : MonoBehaviour
     void OnCollisionExit2D(Collision2D other)
     {
         
-        if (other.transform.tag == "Player")
+        if (other.transform.tag == playerTag1 || other.transform.tag == playerTag2)
         {
             other.transform.parent = null;
         }
