@@ -114,9 +114,9 @@ public class CreateRope : MonoBehaviour
         if(!isBreak){
             UpdateRope();
 
-            if(!isUnbreakable){
-                CheckBreakRope(oldDistance);
-            }
+            
+            CheckBreakRope(oldDistance);
+            
         }
     }
 
@@ -219,14 +219,19 @@ public class CreateRope : MonoBehaviour
     }
 
     public void RopeDamage(string n){
-        
-        if(!string.Equals(nameCollision,n)){
-            lives++;
-            if(lives >= (ropeLives)){
-                BreakRope();
+        if (!isUnbreakable)
+        {
+            if (!string.Equals(nameCollision, n))
+            {
+                lives++;
+                if (lives >= (ropeLives))
+                {
+                    BreakRope();
+                }
             }
+            nameCollision = n;
         }
-        nameCollision = n;
+        
     }
 
     public void UnbreakableRopeOn(){
