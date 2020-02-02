@@ -10,6 +10,8 @@ TagManager:
   - FallingObject
   - Player1
   - Player2
+  - Player1Images
+  - Player2Images
   layers:
   - Default
   - TransparentFX

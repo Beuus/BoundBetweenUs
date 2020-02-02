@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 // Game States
-public enum GameState { MAIN_MENU, CONTROLS, CHAMPIONS, GAME, PAUSED }
+public enum GameState { MAIN_MENU, CONTROLS, CHAMPIONS, GAME, PAUSED, GAMEOVER }
 
 public delegate void OnStateChangeHandler();
 
@@ -14,7 +15,7 @@ public class GameManager : MonoBehaviour
 
 	public PlayerGenre player1;
 	public PlayerGenre player2;
-	
+
 	public event OnStateChangeHandler OnStateChange;
 	public GameState gameState { get; private set; }
 
@@ -47,7 +48,8 @@ public class GameManager : MonoBehaviour
 
 	public void GameOver()
 	{
-		Debug.Log("GameOver");
+		this.SetGameState(GameState.GAME);
+		Debug.Log(this.gameState);
 		SceneManager.LoadScene("RetryScene");
 	}
 }
