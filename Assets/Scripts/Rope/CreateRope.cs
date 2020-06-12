@@ -171,20 +171,24 @@ public class CreateRope : MonoBehaviour
     }
 
     private void DeleteNode(int side){
-        GameObject nodeToRemove = nodes[0];
+        if(nodes.Count > 5){
+            GameObject nodeToRemove = nodes[0];
 
-        nodes.RemoveAt(0);
-        springs.RemoveAt(0);
-
-        Destroy(nodeToRemove);
-        if(side > 0){
-            springs[1].connectedBody = fixedNodeOne.GetComponent<Rigidbody2D>();
-            springs[1].anchor = -new Vector3(sizeSprite / 2, 0, 0);
+            nodes.RemoveAt(0);
+            springs.RemoveAt(0);
+            Destroy(nodeToRemove);
+            if (side > 0)
+            {
+                springs[1].connectedBody = fixedNodeOne.GetComponent<Rigidbody2D>();
+                springs[1].anchor = -new Vector3(sizeSprite / 2, 0, 0);
+            }
+            else
+            {
+                springs[1].connectedBody = fixedNodeTwo.GetComponent<Rigidbody2D>();
+                springs[1].anchor = new Vector3(sizeSprite / 2, 0, 0);
+            }
         }
-        else{
-            springs[1].connectedBody = fixedNodeTwo.GetComponent<Rigidbody2D>();
-            springs[1].anchor = new Vector3(sizeSprite / 2, 0, 0);
-        }
+        
 
     }
 

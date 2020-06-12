@@ -31,15 +31,33 @@ public class PlayerController : MonoBehaviour
 
         GameManager g = FindObjectOfType<GameManager>();
 
-        if (g.player1 == PlayerGenre.BOY)
+        if (player.tag == "Player1")
         {
-            GetComponent<SpriteRenderer>().sprite = boySprite;
-            GetComponent<Animator>().runtimeAnimatorController = boyAnim;
-        }
-        else{
-            GetComponent<SpriteRenderer>().sprite = girlSprite;
-            GetComponent<Animator>().runtimeAnimatorController = girlAnim;
+            if (g.player1 == PlayerGenre.BOY)
+            {
+                GetComponent<SpriteRenderer>().sprite = boySprite;
+                GetComponent<Animator>().runtimeAnimatorController = boyAnim;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().sprite = girlSprite;
+                GetComponent<Animator>().runtimeAnimatorController = girlAnim;
 
+            }
+        }
+        else
+        {
+            if (g.player2 == PlayerGenre.BOY)
+            {
+                GetComponent<SpriteRenderer>().sprite = boySprite;
+                GetComponent<Animator>().runtimeAnimatorController = boyAnim;
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().sprite = girlSprite;
+                GetComponent<Animator>().runtimeAnimatorController = girlAnim;
+
+            }
         }
     }
 
